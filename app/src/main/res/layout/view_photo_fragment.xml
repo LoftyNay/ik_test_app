@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/progress_view_photo"
+        layout="@layout/progress_bar"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/no_net_connection"
+        layout="@layout/no_connection"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/no_results"
+        layout="@layout/no_result"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/view_photo_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:scrollbars="vertical"
+        android:visibility="visible" />
+
+</LinearLayout>

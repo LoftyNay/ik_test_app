@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ik_test_app</string>
+
+    <string name="api_key">90f755b7bd47e85fca02039debf076be</string>
+    <string name="secret_key">f2bb0743ac87e1e0</string>
+    <string name="image_untitled">Untitled</string>
+    <string name="action_search">Search</string>
+    <string name="get_location_button">Get Location</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="retry">RETRY</string>
+    <string name="not_found">Nothing found</string>
+    <string name="enable_loc_inf">Enable location information?</string>
+    <string name="need_incl_gps">To determine the location you need to include the gps.</string>
+    <string name="go">Go</string>
+    <string name="close">Close</string>
+    <string name="no_results">No results</string>
+
+</resources>
