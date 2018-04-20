@@ -55,7 +55,7 @@ public class ViewOnMapFragment extends MvpAppCompatFragment implements MapFragme
     public boolean onMyLocationButtonClick() {
         if (!Utils.isGpsOn(Objects.requireNonNull(getContext())) & !Utils.isNetworkConnected(getContext()) & Build.VERSION.SDK_INT < 23 ||
                 !Utils.isGpsOn(getContext()) & Build.VERSION.SDK_INT >= 23) {
-            mapFragmentPresenter.buildAlert(getActivity());
+            mapFragmentPresenter.getAlertNeedGPS(getActivity());
         }
         return false;
     }
@@ -70,11 +70,6 @@ public class ViewOnMapFragment extends MvpAppCompatFragment implements MapFragme
         }
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         googleMap.getUiSettings().setMyLocationButtonEnabled(true);
-    }
-
-    @Override
-    public void showAlertNeedGPS(AlertDialog dialog) {
-        dialog.show();
     }
 
     @Override

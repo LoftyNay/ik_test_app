@@ -10,5 +10,4 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.List;
 
 public interface MapFragmentView extends MvpView  {
-    void showAlertNeedGPS(AlertDialog dialog);
 }

@@ -17,7 +17,7 @@ public class MapFragmentPresenter extends MvpPresenter<MapFragmentView> implemen
     }
 
     @Override
-    public void buildAlert(Activity activity) {
+    public void getAlertNeedGPS(Activity activity) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle(R.string.enable_loc_inf)
                 .setMessage(R.string.need_incl_gps)
@@ -27,7 +27,6 @@ public class MapFragmentPresenter extends MvpPresenter<MapFragmentView> implemen
                 })
                 .setNegativeButton(R.string.close, (dialog, which) -> dialog.dismiss());
         AlertDialog alertDialog = builder.create();
-
-        getViewState().showAlertNeedGPS(alertDialog);
+        alertDialog.show();
     }
 }

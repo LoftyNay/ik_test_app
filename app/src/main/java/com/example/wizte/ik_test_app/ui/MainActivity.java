@@ -63,7 +63,6 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, TabL
         tabLayout.setOnTabSelectedListener(this);
     }
 
-    @PermissionChecker.PermissionResult
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
             case 1: {
@@ -135,6 +134,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, TabL
 
     @Override
     public void onSearchViewClosed() {
+        searchView.setFocusable(false);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
     }
 
